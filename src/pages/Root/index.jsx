@@ -68,7 +68,8 @@ const Root = () => {
 
       <Section>
         <div style={{position:'relative', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <img src="/sparkle.png" alt="" style={{ position: 'absolute', right: 40 }} />
+          <img src="/hope.svg" className='mb-[25px]' style={{ }} />
+          <img src="/sparkle.png" alt="" style={{ position: 'absolute', right: "32%", top: "30%", }} />
           <Typography.Title>Работы</Typography.Title>
           <Typography.Text style={{ color: "#94A3B8", fontWeight: "500", fontSize: 18, width: 600, textAlign: 'center' }}>Поддерживайте детские творческие проекты через краудфандинг! Уникальный способ поддержать молодых талантов в их творческих начинаниях</Typography.Text>
         </div>
@@ -76,7 +77,8 @@ const Root = () => {
 
       <Section>
         <div style={{position:'relative', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <img src="/circled1.png" alt="" style={{ position: 'absolute', right: 0, top: 10 }} />
+          <img src="/Party.svg" className='my-[25px]' style={{ }} />
+          <img src="/circled1.png" alt="" style={{ position: 'absolute', right: 0, top: '44%' }} />
           <Typography.Title>Часто задаваемые вопросы</Typography.Title>
           <Typography.Text style={{ color: "#94A3B8", fontWeight: "500", fontSize: 18, width: 600, textAlign: 'center' }}>Здесь собраны частые вопросы и надеемся вам это поможет при решении проблем на сайте</Typography.Text>
         </div>
