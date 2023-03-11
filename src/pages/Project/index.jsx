@@ -133,7 +133,7 @@ const Project = () => {
           </div>
 
           <div className="bg-[#FF8540] rounded-[16px] py-6 px-6 w-[392px]">
-            <img src="/or.png" alt="" className='w-[344px] h-[224px] rounded-[16px]'/>
+            <img src="/or.svg" alt="" className='w-[344px] h-[224px] rounded-[16px]'/>
             <h1 className=" font-bold text-2xl text-[#f8fafc] my-4">СПАСИБО ОТ ВСЕХ ГНОМИКОВ ЛЕСА!</h1>
             <p className='font-[500] text-[#f8fafc] text-base mb-4'>Сумма: 4500 рублей</p>
             <div className="w-full h-[150px]">
