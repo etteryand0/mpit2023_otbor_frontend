@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# KidStarter
+Проект реализован в рамках отборочного этапа ГО Якутск конкурса Моя Профессия - IT 2023.
+<br><br>
+Наш проект KidStarter  помогает юным специалистам искать финансовую поддержку для тех или иных задач, а также искать и общаться с единомышленниками. Сервис представляет из себя краудфайдинговую программу, с функционалом поиска единомышленников и предоставляет возможности для общения с ними. Спонсору предоставляется функционал для пожертвования денежных средств и поиска наиболее интересных ему проектов. Участник имеет возможность получения денежной поддержки от случайных лиц, получение фидбэка. Бизнес - модель: B2C, Брокерская. Монетизация будет осуществляться от участника. Проценты от собранной суммы.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Технологии back-end
+- Apollo server (Graphql)
+- Express
+- Docker
+- Prisma ORM
+- Postgresql
 
-## Available Scripts
+## Технологии front-end
+- React
+- Apollo client (Graphql)
+- styled-components
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Команда "Аргали"
+| Сергин Сергей                             |                  Кычкин Андрей                   |                       Семёнова Августина |
+| :---------------------------------------- | :----------------------------------------------: | ---------------------------------------: |
+| Разработчик                               |                     Менеджер                     |                                 Дизайнер |
+| Full-Stack Web & Mobile разработчик       |                 Product Manager                  |                           UX/UI Designer |
+| Победитель и лучший разработчик МПИТ-2021 |               Победитель МПИТ-2022               |                     Победитель МПИТ-2022 |
+| +7 984 109-30-55 <br> etteryand@gmail.com | +7 914 291-78-01 <br> andrushkakychkin@gmail.com | +7 914 277-40-56 <br> semalvas14@mail.ru |
