@@ -13,6 +13,7 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   background-color:#F8FAFC;
+  z-index: 1;
 `
 
 const Right = styled.div`

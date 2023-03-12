@@ -45,7 +45,7 @@ const FinishSignUp = () => {
     const email = searchParams.get("email")
 
     console.log('signup went', email)
-    doSignup({ variables: { data: { email, name, password }}}).then(({token}) => {
+    doSignup({ variables: { data: { email, name, password }}}).then(({ data: { signup: { token } }}) => {
       console.log('signup success', token)
       localStorage.setItem('token', token)
       navigate("/")

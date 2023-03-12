@@ -41,7 +41,7 @@ const Login = () => {
   const [alertOpen, setAlertOpen] = useState(false)
 
   const onFinish = ({ email, password }) => {
-    doLogin({variables: { data: {email, password}}}).then(({ token }) => {
+    doLogin({variables: { data: {email, password}}}).then(({ data: { login: { token }}}) => {
       console.log('login success', token)
       localStorage.setItem('token', token)
       navigate("/")

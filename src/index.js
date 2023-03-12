@@ -1,4 +1,4 @@
-import './index.css';
+// import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -6,7 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, ApolloLink, concat, HttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
 import Login from './pages/Login';
@@ -15,6 +15,7 @@ import { ConfigProvider } from 'antd';
 import FinishSignUp from './pages/FinishSignUp';
 import Root from './pages/Root';
 import Project from './pages/Project';
+import CreateProject from './pages/CreateProject';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/project",
     element: <Project />,
+  },
+  {
+    path: "/create-project",
+    element: <CreateProject />,
   },
   {
     path: "/login",
@@ -39,9 +44,8 @@ const router = createBrowserRouter([
   }
 ]);
 
-const httpLink = createHttpLink({
+const httpLink = new HttpLink({
   uri: 'http://localhost:4000/graphql',
-  credentials: 'same-origin'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -55,6 +59,18 @@ const authLink = setContext((_, { headers }) => {
   }
 });
 
+const authMiddleware = new ApolloLink((operation, forward) => {
+  const token = localStorage.getItem('token')
+  operation.setContext(({ headers = {} }) => ({
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    }
+  }));
+
+  return forward(operation);
+})
+
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql',
   cache: new InMemoryCache(),
@@ -62,7 +78,6 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <ApolloProvider client={client}>
       <ConfigProvider
         theme={{
@@ -76,7 +91,6 @@ root.render(
         <RouterProvider router={router} />
       </ConfigProvider>
     </ApolloProvider>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

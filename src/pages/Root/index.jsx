@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client'
 import { Button, Typography } from 'antd'
-import React from 'react'
+import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from '../../components/Header'
 
@@ -37,6 +38,8 @@ const FEED_QUERY = gql`
 
 
 const Root = () => {
+  const navigate = useNavigate()
+  const projectsSectionRef = useRef()
   // const { data, loading } = useQuery(FEED_QUERY)
 
   return (
@@ -46,8 +49,8 @@ const Root = () => {
       <Section style={{marginTop: 80 }}>
         <img src="/hello.png" alt="" width="600" />
         <div style={{marginTop: 50}}>
-          <Button size="large" style={{ backgroundColor: "#FF8540", color: "#fff", fontWeight: "600", paddingLeft: 24, paddingRight: 24 }}>Смотреть проекты</Button>
-          <Button size="large" style={{ fontWeight: "600", marginLeft: 12, backgroundColor: "#4B8EFF", color: "#fff", paddingLeft: 24, paddingRight: 24 }}>Загрузить проекты</Button>
+          <Button onClick={() => projectsSectionRef.current.scrollIntoView()} size="large" style={{ backgroundColor: "#FF8540", color: "#fff", fontWeight: "600", paddingLeft: 24, paddingRight: 24 }}>Смотреть проекты</Button>
+          <Button onClick={() => navigate("/create-project")} size="large" style={{ fontWeight: "600", marginLeft: 12, backgroundColor: "#4B8EFF", color: "#fff", paddingLeft: 24, paddingRight: 24 }}>Загрузить проект</Button>
         </div>
         <div style={{position: 'relative', display: 'flex', gap: 48, margin: 140}}>
           <img src="/line1.png" alt="" style={{ position: 'absolute', top: -70, left: -20 }} />
@@ -66,7 +69,7 @@ const Root = () => {
         </div>
       </Section>
 
-      <Section>
+      <Section ref={projectsSectionRef}>
         <div style={{position:'relative', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <img src="/sparkle.png" alt="" style={{ position: 'absolute', right: 40 }} />
           <Typography.Title>Работы</Typography.Title>
@@ -81,10 +84,6 @@ const Root = () => {
           <Typography.Text style={{ color: "#94A3B8", fontWeight: "500", fontSize: 18, width: 600, textAlign: 'center' }}>Здесь собраны частые вопросы и надеемся вам это поможет при решении проблем на сайте</Typography.Text>
         </div>
       </Section>
-      <h1 classname="text-3xl font-bold underline">
-        hello
-      </h1>
-
     </Container>
   )
 }
